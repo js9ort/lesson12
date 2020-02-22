@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<body>
+<div>
+	<center>
+		<canvas width="1024" height="400">
+			Your browser does not support the canvas element.
+		</canvas>
+	</center>
+	<script>
+		var car_url = "./images/car.png";
+		var road_url = "./images/road.jpg";
+	
+		var context = document.querySelector("canvas").getContext("2d");
+		
+		var road_image 	= new Image();
+		road_image.src = road_url;
+		var car_image 	= new Image();
+		car_image.src = car_url;
+		
+		setTimeout(function(){
+			context.drawImage(road_image, 0, 0, 1024, 400, 0, 0, 1024, 400);
+			context.drawImage(car_image, 50, 50, 90, 140);
+		}, 2000);
+				
+	</script>
+</body>
+</html>
